@@ -4,7 +4,7 @@ This project explores the relationship between **market sentiment** (e.g., Greed
 
 ---
 
-## 📂 Section 1: Connecting Drive & Importing Dataset
+##  Section 1: Connecting Drive & Importing Dataset
 
 - Mounted Google Drive to access and load the dataset.
 - Read merged trade data with key fields such as:
@@ -16,25 +16,25 @@ This project explores the relationship between **market sentiment** (e.g., Greed
 
 ---
 
-## 🧹 Section 2: Data Cleaning
+##  Section 2: Data Cleaning
 
 - Removed missing values and duplicates.
 - Parsed timestamps and converted to IST.
 - Ensured consistent data types.
 - Engineered `is_profitable` column to classify profitable vs unprofitable trades.
 
-**✅ Cleaned Dataset Summary:**
+** Cleaned Dataset Summary:**
 - Total Trades: `211,224`
 - Sentiment Categories: `Extreme Fear`, `Fear`, `Neutral`, `Greed`, `Extreme Greed`
 
 ---
-## 📊 Section 3: Exploratory Data Analysis (EDA)
+##  Section 3: Exploratory Data Analysis (EDA)
 
 This section explores the relationship between **market sentiment** and **trade performance metrics** like profitability, trade size, and event type. The key objective is to identify how trader behavior and outcomes vary under different emotional conditions (e.g., greed, fear).
 
 ---
 
-### 🔵 1. Sentiment Distribution — *Pie Chart*
+###  1. Sentiment Distribution — *Pie Chart*
 
 **What it shows:**  
 The proportion of trades executed under each sentiment condition.
@@ -45,7 +45,7 @@ The proportion of trades executed under each sentiment condition.
 
 ---
 
-### 🔷 2. Average Profit per Sentiment — *Bar Plot*
+##   2. Average Profit per Sentiment — *Bar Plot*
 
 **What it shows:**  
 Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
@@ -65,7 +65,7 @@ Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
 
 ---
 
-### 📉 3. Profitability Distribution — *Box Plot*
+###  3. Profitability Distribution — *Box Plot*
 
 **What it shows:**  
 Distribution of `closed_pnl` across sentiment categories.
@@ -77,7 +77,7 @@ Distribution of `closed_pnl` across sentiment categories.
 
 ---
 
-### 📈 4. PnL Over Time by Sentiment — *Line Plot*
+###  4. PnL Over Time by Sentiment — *Line Plot*
 
 **What it shows:**  
 Average `closed_pnl` per day, colored by sentiment classification.
@@ -88,7 +88,7 @@ Average `closed_pnl` per day, colored by sentiment classification.
 
 ---
 
-### 🟧 5. Trade Size by Sentiment — *Box Plot / Violin Plot*
+###  5. Trade Size by Sentiment — *Box Plot / Violin Plot*
 
 **What it shows:**  
 Variation in `size` (trade volume) under different sentiment regimes.
@@ -99,7 +99,7 @@ Variation in `size` (trade volume) under different sentiment regimes.
 
 ---
 
-### 🟨 6. Count of Event Types per Sentiment — *Grouped Bar Plot*
+###  6. Count of Event Types per Sentiment — *Grouped Bar Plot*
 
 **What it shows:**  
 Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
@@ -110,7 +110,7 @@ Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
 
 ---
 
-### 🟩 7. Trade Profitability by Symbol & Sentiment — *Heatmap*
+###  7. Trade Profitability by Symbol & Sentiment — *Heatmap*
 
 **What it shows:**  
 Average `closed_pnl` for each symbol-sentiment pair.
@@ -121,7 +121,7 @@ Average `closed_pnl` for each symbol-sentiment pair.
 
 ---
 
-### 🟦 8. Correlation Matrix — *Heatmap*
+###  8. Correlation Matrix — *Heatmap*
 
 **What it shows:**  
 Pairwise correlation between all numeric variables (e.g., `size`, `start_position`, `pnl`).
@@ -142,25 +142,25 @@ Pairwise correlation between all numeric variables (e.g., `size`, `start_positio
 
 ---
 
-## 🧪 Section 4: Statistical Testing
+##  Section 4: Statistical Testing
 
 ### T-Test: Greed vs Fear PnL Comparison
 
 - **T-statistic:** -1.851  
 - **P-value:** 0.0642
 
-**🧠 Interpretation:**  
+** Interpretation:**  
 While not significant at the 5% level, this result is **directionally meaningful**. It suggests that **Greed-period trades tend to outperform Fear-period trades** in profitability. Further sampling or refined metrics may yield significance.
 
 ---
 
-## 🤖 Section 5: Predicting Profitability (Classification Model)
+##  Section 5: Predicting Profitability (Classification Model)
 
 ### Model: Random Forest Classifier
 - **Target:** `is_profitable` (binary)
 - **Features:** sentiment, trade size, execution price, start position, symbol, event type
 
-### ✅ Model Performance:
+###  Model Performance:
 | Metric        | Score |
 |---------------|-------|
 | Accuracy      | 99%   |
@@ -168,12 +168,12 @@ While not significant at the 5% level, this result is **directionally meaningful
 | Recall        | 99%   |
 | F1-score      | 98%   |
 
-**🧠 Insight:**  
+** Insight:**  
 Market sentiment and trade size are strong indicators of trade profitability. The model generalizes well with minimal overfitting.
 
 ---
 
-## ⏱️ Section 6: Sentiment Time-Lag Effects
+##    Section 6: Sentiment Time-Lag Effects
 
 - Introduced `lagged_classification` to reflect previous day’s sentiment.
 - Compared lagged sentiment to current-day PnL.
@@ -186,12 +186,12 @@ Market sentiment and trade size are strong indicators of trade profitability. Th
 | Extreme Fear     | 34.33    |
 | Neutral          | 34.35    |
 
-**🧠 Insight:**  
+**   Insight:**  
 Sentiment from the **previous day** significantly impacts trade performance. This suggests a **momentum effect or trader psychology carryover**.
 
 ---
 
-## 📉 Section 7: Risk-Adjusted Returns (Sharpe-like Ratio)
+##   Section 7: Risk-Adjusted Returns (Sharpe-like Ratio)
 
 Computed `return / standard deviation` of PnL by sentiment:
 
@@ -203,12 +203,12 @@ Computed `return / standard deviation` of PnL by sentiment:
 | Neutral         | Low                 |
 | Extreme Fear    | Lowest              |
 
-**🧠 Insight:**  
+**  Insight:**  
 Greedy periods deliver the **best risk-adjusted performance**, while fearful conditions produce the **least favorable trade-offs**.
 
 ---
 
-## 🔍 Section 8: Clustering Analysis (Unsupervised Learning)
+##  Section 8: Clustering Analysis (Unsupervised Learning)
 
 ### Method: KMeans Clustering (k=4)
 
@@ -218,7 +218,7 @@ Clustered trades based on:
 - Start position
 - Market sentiment
 
-### ✅ Cluster Breakdown:
+###   Cluster Breakdown:
 
 | Cluster | Dominant Sentiment     |
 |---------|------------------------|
@@ -227,7 +227,7 @@ Clustered trades based on:
 | 2       | Extreme Greed (46%), Greed (18%)  
 | 3       | Greed (73%), Neutral (12%), Fear (9%)  
 
-**🧠 Insight:**
+**  Insight:**
 - **Cluster 2** represents high-risk, high-reward behavior (Extreme Greed).
 - **Cluster 1** is more conservative (Fear-dominated).
 - Clusters reflect **behavioral archetypes** which can be useful for personalized trade recommendations.
@@ -243,7 +243,7 @@ Clustered trades based on:
 
 ---
 
-## 🚀 Future Work
+##  Future Work
 
 - Incorporate **time-series models** (e.g., LSTM, ARIMA) for forecasting sentiment impact.
 - Enrich features using **real-time sentiment** from Twitter/news APIs.
