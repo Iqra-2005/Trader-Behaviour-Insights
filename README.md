@@ -236,10 +236,10 @@ Clustered trades based on:
 
 ## 📌 Summary of Key Findings
 
-- **Greedy market sentiment is linked to higher profitability and better risk-adjusted returns**.
-- **Lagged sentiment influences today’s trade performance**, indicating behavioral continuity.
-- **Classification models can predict trade profitability with high accuracy**.
-- **Clustering reveals distinct trading behavior segments** driven by sentiment.
+- 1. When people in the market feel greedy or excited, trades usually make more money and do better even when you consider the risks.
+- 2. The way traders felt in the past (like yesterday) still affects how they trade today. This shows that their feelings and behavior stay pretty consistent over time.
+- 3. We can use computer models to guess if a trade will make money, and these models are often very accurate.
+- 4. When we group traders based on how they behave, we can see clear patterns and those patterns are strongly affected by their emotions and mood about the market.
 
 ---
 
