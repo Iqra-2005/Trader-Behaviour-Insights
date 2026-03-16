@@ -1,4 +1,4 @@
-# Trader-Behaviour-Insights
+# Trader Behaviour Insights
 
 This project explores the relationship between **market sentiment** (e.g., Greed, Fear, Neutral) and **trading performance** using a large real-world dataset. It performs data cleaning, exploratory data analysis (EDA), statistical testing, predictive modeling, sentiment lag analysis, and unsupervised clustering to extract key behavioral insights.
 
