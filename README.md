@@ -4,6 +4,18 @@ This project explores the relationship between **market sentiment** (e.g., Greed
 
 ---
 
+## 📁 Project Structure
+
+> This project consists of a single self-contained notebook that performs:
+> - Data cleaning and preparation
+> - Exploratory data analysis (EDA) with visualizations
+> - Statistical testing (t-tests)
+> - Machine learning classification model
+> - Time-lagged sentiment analysis
+> - Clustering to explore trader behavior segments
+
+---
+
 ##  Section 1: Connecting Drive & Importing Dataset
 
 - Mounted Google Drive to access and load the dataset.
@@ -34,7 +46,7 @@ This section explores the relationship between **market sentiment** and **trade 
 
 ---
 
-###  1. Sentiment Distribution — *Pie Chart*
+###  1. Sentiment Distribution - *Pie Chart*
 
 **What it shows:**  
 The proportion of trades executed under each sentiment condition.
@@ -45,7 +57,7 @@ The proportion of trades executed under each sentiment condition.
 
 ---
 
-##   2. Average Profit per Sentiment — *Bar Plot*
+##   2. Average Profit per Sentiment - *Bar Plot*
 
 **What it shows:**  
 Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
@@ -65,7 +77,7 @@ Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
 
 ---
 
-###  3. Profitability Distribution — *Box Plot*
+###  3. Profitability Distribution - *Box Plot*
 
 **What it shows:**  
 Distribution of `closed_pnl` across sentiment categories.
@@ -77,7 +89,7 @@ Distribution of `closed_pnl` across sentiment categories.
 
 ---
 
-###  4. PnL Over Time by Sentiment — *Line Plot*
+###  4. PnL Over Time by Sentiment - *Line Plot*
 
 **What it shows:**  
 Average `closed_pnl` per day, colored by sentiment classification.
@@ -88,7 +100,7 @@ Average `closed_pnl` per day, colored by sentiment classification.
 
 ---
 
-###  5. Trade Size by Sentiment — *Box Plot / Violin Plot*
+###  5. Trade Size by Sentiment - *Box Plot / Violin Plot*
 
 **What it shows:**  
 Variation in `size` (trade volume) under different sentiment regimes.
@@ -99,7 +111,7 @@ Variation in `size` (trade volume) under different sentiment regimes.
 
 ---
 
-###  6. Count of Event Types per Sentiment — *Grouped Bar Plot*
+###  6. Count of Event Types per Sentiment - *Grouped Bar Plot*
 
 **What it shows:**  
 Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
@@ -110,7 +122,7 @@ Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
 
 ---
 
-###  7. Trade Profitability by Symbol & Sentiment — *Heatmap*
+###  7. Trade Profitability by Symbol & Sentiment - *Heatmap*
 
 **What it shows:**  
 Average `closed_pnl` for each symbol-sentiment pair.
@@ -121,7 +133,7 @@ Average `closed_pnl` for each symbol-sentiment pair.
 
 ---
 
-###  8. Correlation Matrix — *Heatmap*
+###  8. Correlation Matrix - *Heatmap*
 
 **What it shows:**  
 Pairwise correlation between all numeric variables (e.g., `size`, `start_position`, `pnl`).
@@ -253,13 +265,4 @@ Clustered trades based on:
 
 ---
 
-## 📁 Project Structure
-
-> This project consists of a single self-contained notebook that performs:
-> - Data cleaning and preparation
-> - Exploratory data analysis (EDA) with visualizations
-> - Statistical testing (t-tests)
-> - Machine learning classification model
-> - Time-lagged sentiment analysis
-> - Clustering to explore trader behavior segments
 
