@@ -44,112 +44,112 @@ This project explores the relationship between **market sentiment** (e.g., Greed
 
 This section explores the relationship between **market sentiment** and **trade performance metrics** like profitability, trade size, and event type. The key objective is to identify how trader behavior and outcomes vary under different emotional conditions (e.g., greed, fear).
 
-      ---
+---
       
-      ###  1. Sentiment Distribution - *Pie Chart*
+###  1. Sentiment Distribution - *Pie Chart*
       
-      **What it shows:**  
-      The proportion of trades executed under each sentiment condition.
+**What it shows:**  
+The proportion of trades executed under each sentiment condition.
       
-      **Insight:**  
-      - Most trades occur under `Fear`, `Greed`, and `Extreme Greed`.  
-      - `Extreme Fear` conditions lead to the fewest trades — possibly indicating market hesitancy.
+**Insight:**  
+- Most trades occur under `Fear`, `Greed`, and `Extreme Greed`.
+- `Extreme Fear` conditions lead to the fewest trades — possibly indicating market hesitancy.
       
-      ---
+---
       
-      ##   2. Average Profit per Sentiment - *Bar Plot*
+###   2. Average Profit per Sentiment - *Bar Plot*
       
-      **What it shows:**  
-      Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
+**What it shows:**  
+ Mean `closed_pnl` (profit/loss) grouped by `classification` (sentiment).
       
-      | Sentiment       | Avg. PnL |
-      |-----------------|----------|
-      | Extreme Greed   | 67.91    |
-      | Fear            | 54.35    |
-      | Greed           | 42.95    |
-      | Neutral         | 34.35    |
-      | Extreme Fear    | 34.33    |
+| Sentiment       | Avg. PnL |
+|-----------------|----------|
+| Extreme Greed   | 67.91    |
+| Fear            | 54.35    |
+| Greed           | 42.95    |
+| Neutral         | 34.35    |
+| Extreme Fear    | 34.33    |
       
-      **Insight:**  
-      - Trades made in **Extreme Greed** periods are most profitable on average.  
-      - Surprisingly, **Fear** yields better returns than **Greed**, suggesting more disciplined trading.  
-      - **Neutral** and **Extreme Fear** lead to lower profits, possibly due to market indecision.
+**Insight:**  
+ - Trades made in **Extreme Greed** periods are most profitable on average.  
+ - Surprisingly, **Fear** yields better returns than **Greed**, suggesting more disciplined trading.  
+ - **Neutral** and **Extreme Fear** lead to lower profits, possibly due to market indecision.
       
-      ---
+---
       
-      ###  3. Profitability Distribution - *Box Plot*
+###  3. Profitability Distribution - *Box Plot*
       
-      **What it shows:**  
-      Distribution of `closed_pnl` across sentiment categories.
+**What it shows:**  
+Distribution of `closed_pnl` across sentiment categories.
       
-      **Insight:**  
-      - `Extreme Greed` has the **highest median** and **widest range**.  
-      - `Fear` profits are relatively **stable**, suggesting controlled trading.  
-      - Losses during `Greed` and `Extreme Fear` can be **extreme**, showing risk volatility.
+**Insight:**  
+- `Extreme Greed` has the **highest median** and **widest range**.  
+- `Fear` profits are relatively **stable**, suggesting controlled trading.  
+- Losses during `Greed` and `Extreme Fear` can be **extreme**, showing risk volatility.
       
-      ---
+---
       
-      ###  4. PnL Over Time by Sentiment - *Line Plot*
+###  4. PnL Over Time by Sentiment - *Line Plot*
       
-      **What it shows:**  
-      Average `closed_pnl` per day, colored by sentiment classification.
+**What it shows:**  
+ Average `closed_pnl` per day, colored by sentiment classification.
       
-      **Insight:**  
-      - Helps visualize how sentiment phases affect market behavior over time.  
-      - Shows spikes in profitability during strong sentiment waves (e.g., `Extreme Greed` rallies).
+**Insight:**  
+- Helps visualize how sentiment phases affect market behavior over time.  
+- Shows spikes in profitability during strong sentiment waves (e.g., `Extreme Greed` rallies).
       
-      ---
+---
       
-      ###  5. Trade Size by Sentiment - *Box Plot / Violin Plot*
+###  5. Trade Size by Sentiment - *Box Plot / Violin Plot*
       
-      **What it shows:**  
-      Variation in `size` (trade volume) under different sentiment regimes.
+**What it shows:**  
+Variation in `size` (trade volume) under different sentiment regimes.
       
-      **Insight:**  
-      - Larger trades are often placed under `Greed` and `Extreme Greed`.  
-      - Smaller trades dominate in `Neutral` and `Extreme Fear`, suggesting defensive positions.
+**Insight:**  
+- Larger trades are often placed under `Greed` and `Extreme Greed`.  
+- Smaller trades dominate in `Neutral` and `Extreme Fear`, suggesting defensive positions.
       
-      ---
+---
       
-      ###  6. Count of Event Types per Sentiment - *Grouped Bar Plot*
+###  6. Count of Event Types per Sentiment - *Grouped Bar Plot*
       
-      **What it shows:**  
-      Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
+**What it shows:**  
+Number of trading `events` (open, close, SL-hit, etc.) by sentiment.
       
-      **Insight:**  
-      - More `close` and `SL-hit` events in `Fear` and `Extreme Fear`.  
-      - More `open` events during `Greed` and `Extreme Greed` — traders are aggressive in bull runs.
+**Insight:**  
+- More `close` and `SL-hit` events in `Fear` and `Extreme Fear`.  
+- More `open` events during `Greed` and `Extreme Greed` — traders are aggressive in bull runs.
       
-      ---
+ ---
       
-      ###  7. Trade Profitability by Symbol & Sentiment - *Heatmap*
+###  7. Trade Profitability by Symbol & Sentiment - *Heatmap*
+
+**What it shows:**  
+Average `closed_pnl` for each symbol-sentiment pair.
       
-      **What it shows:**  
-      Average `closed_pnl` for each symbol-sentiment pair.
+ **Insight:**  
+- Certain symbols perform better in specific sentiments.  
+ - Helps build **sentiment-aware trading strategies** by selecting symbols with better risk-adjusted return profiles.
       
-      **Insight:**  
-      - Certain symbols perform better in specific sentiments.  
-      - Helps build **sentiment-aware trading strategies** by selecting symbols with better risk-adjusted return profiles.
+ ---
       
-      ---
+###  8. Correlation Matrix - *Heatmap*
       
-      ###  8. Correlation Matrix - *Heatmap*
+**What it shows:**  
+ Pairwise correlation between all numeric variables (e.g., `size`, `start_position`, `pnl`).
       
-      **What it shows:**  
-      Pairwise correlation between all numeric variables (e.g., `size`, `start_position`, `pnl`).
+**Insight:**  
+- `Size` and `execution_price` have low correlation with `closed_pnl`.  
+ - Suggests profit is more sentiment- and strategy-driven than size-driven.
       
-      **Insight:**  
-      - `Size` and `execution_price` have low correlation with `closed_pnl`.  
-      - Suggests profit is more sentiment- and strategy-driven than size-driven.
+ ---
       
-      ---
+ ### 📌 Summary of EDA Insights:
       
-      ### 📌 Summary of EDA Insights:
-      
-      - **Sentiment significantly affects trade profitability** both visually and statistically.
-      - **Extreme Greed** is often associated with high-profit trades.
-      - **Fear**, while traditionally seen as negative, often results in disciplined and profitable trading.
-      - Trading behavior (size, event type) shifts meaningfully across different sentiment states.
+- **Sentiment significantly affects trade profitability** both visually and statistically.
+- **Extreme Greed** is often associated with high-profit trades.
+- **Fear**, while traditionally seen as negative, often results in disciplined and profitable trading.
+- Trading behavior (size, event type) shifts meaningfully across different sentiment states.
       
       
       ---
