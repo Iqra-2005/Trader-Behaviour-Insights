@@ -16,7 +16,7 @@ This project explores the relationship between **market sentiment** (e.g., Greed
 
 ---
 
-##  Section 1: Connecting Drive & Importing Dataset
+##  > - Section 1: Connecting Drive & Importing Dataset
 
 - Mounted Google Drive to access and load the dataset.
 - Read merged trade data with key fields such as:
