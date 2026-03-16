@@ -152,7 +152,7 @@ Average `closed_pnl` for each symbol-sentiment pair.
 - Trading behavior (size, event type) shifts meaningfully across different sentiment states.
       
       
-      ---
+---
 
 ##  Section 4: Statistical Testing
 
