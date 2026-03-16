@@ -140,7 +140,7 @@ Average `closed_pnl` for each symbol-sentiment pair.
       
 **Insight:**  
 - `Size` and `execution_price` have low correlation with `closed_pnl`.  
- - Suggests profit is more sentiment- and strategy-driven than size-driven.
+- Suggests profit is more sentiment- and strategy-driven than size-driven.
       
  ---
       
