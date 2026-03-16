@@ -161,8 +161,7 @@ Average `closed_pnl` for each symbol-sentiment pair.
 - **T-statistic:** -1.851  
 - **P-value:** 0.0642
 
-** Interpretation:**  
-While not significant at the 5% level, this result is **directionally meaningful**. It suggests that **Greed-period trades tend to outperform Fear-period trades** in profitability. Further sampling or refined metrics may yield significance.
+Interpretation :  While not significant at the 5% level, this result is **directionally meaningful**. It suggests that **Greed-period trades tend to outperform Fear-period trades** in profitability. Further sampling or refined metrics may yield significance.
 
 ---
 
